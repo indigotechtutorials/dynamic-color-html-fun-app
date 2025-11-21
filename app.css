@@ -2,9 +2,19 @@
 
 :root {
   /* --primary color will be set from page so its dynamic  */
-  --primary: hsl(0, 67%, 42%);
+  --primary: hsl(241, 57%, 45%);
+
+  /* TODO: Need to support a primary color with a white bg and change the lightness to work properly. */
+  
   --header: hsl(from var(--primary) h s calc(l + 30));
   --text: hsl(from var(--primary) h s calc(l + 35));
+
+  --primary-light: hsl(from var(--primary) h s calc(l + 5));
+  --primary-light2: hsl(from var(--primary) h s calc(l + 10));
+  --primary-light3: hsl(from var(--primary) h s calc(l + 15));
+  --primary-light4: hsl(from var(--primary) h s calc(l + 20));
+  --primary-light5: hsl(from var(--primary) h s calc(l + 25));
+  --primary-light6: hsl(from var(--primary) h s calc(l + 30));
 }
 
 /* End color definitions */
@@ -83,22 +93,26 @@ body {
 }
 
 .css-vars-list {
-  max-width: 500px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 700px;
+  width: 100%;
 
   .var-container {
     width: 100%;
     display: flex;
 
     .name {
+      width: 50%;
       padding: 16px 8px 16px 8px;
+      background-color: var(--primary-light2);
     }
 
     .value {
+      width: 50%;
       padding: 16px 8px 16px 8px;
+      background-color: var(--primary-light3);
     }
   }
 }

@@ -84,3 +84,12 @@ const convertRGBToHSL = (r,g,b) => {
 
   return "hsl(" + h + "," + s + "%," + l + "%)";
 }
+
+
+const getColor = (name) => {
+  return window.getComputedStyle(document.documentElement).getPropertyValue(name);
+}
+
+const setColor = (name, value) => {
+  document.documentElement.style.setProperty(name, value);
+}
