@@ -24,10 +24,15 @@ const colorValueChanged = (e) => {
   let rgbColor = convertHEXToRGB(newValue)
   let hslColor = convertRGBToHSL(rgbColor.r, rgbColor.g, rgbColor.b)
   setColor("--primary", hslColor)
+  storeColor(hslColor)
   updateCSSVarPreviewValues()
 }
 
 const initializeDynamicColors = () => {
+  let savedColor = retrieveColor()
+  if (savedColor) {
+    setColor("--primary", savedColor)
+  }
   setDefaultInputColor()
 
   let dynamicColorInput = document.querySelector("input[name='dynamic-color']")

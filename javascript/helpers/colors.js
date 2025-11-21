@@ -93,3 +93,11 @@ const getColor = (name) => {
 const setColor = (name, value) => {
   document.documentElement.style.setProperty(name, value);
 }
+
+const storeColor = (color) => {
+  sessionStorage.setItem("--primary", color);
+}
+
+const retrieveColor = () => {
+  return sessionStorage.getItem("--primary")
+}
