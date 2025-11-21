@@ -1,0 +1,104 @@
+/* Color defintions */
+
+:root {
+  /* --primary color will be set from page so its dynamic  */
+  --primary: hsl(0, 67%, 42%);
+  --header: hsl(from var(--primary) h s calc(l + 30));
+  --text: hsl(from var(--primary) h s calc(l + 35));
+}
+
+/* End color definitions */
+
+/* Set colors on elements h1, p, span, a (etc..) */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--header);
+}
+
+p, a, span {
+  color: var(--text);
+}
+
+/* Base styling */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary);
+}
+/* End base styling */
+
+.colors-container {
+  min-height: 80vh;
+  max-width: 1400px;
+  margin: 0px auto 0px auto;
+  display: flex;
+  padding: 0px 16px 0px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 100px;
+
+  h1 {
+    font-size: 44px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .color-picker-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    p {
+      position: absolute;
+    }
+  }
+
+  input[type="color"] {
+    width: 300px;
+    height: 100px;
+  }
+}
+
+.color-definitions {
+  min-height: 80vh;
+  max-width: 1400px;
+  margin: 0px auto 0px auto;
+  display: flex;
+  padding: 0px 16px 0px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 100px;
+}
+
+.css-vars-list {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .var-container {
+    width: 100%;
+    display: flex;
+
+    .name {
+      padding: 16px 8px 16px 8px;
+    }
+
+    .value {
+      padding: 16px 8px 16px 8px;
+    }
+  }
+}

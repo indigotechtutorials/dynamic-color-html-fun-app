@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Colors UI</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="colors-container">
+    <h1> Dynamic colors UI example </h1>
+    <p> Change the color and watch the whole websites UI update automatically </p>
+    <div class="color-picker-container">
+      <input name="dynamic-color" type="color"/>
+      <p> Click me </p>
+    </div>
+  </div>
+
+  <div class="color-definitions">
+    <h2> CSS variable's and values </h2>
+    <p> These are the variables being used for the color scheme they are auto generated based off primary color </p>
+    <div class="css-vars-list"> 
+      <div class="var-container"> 
+        <span class="name">--primary</span>
+        <span class="value" data-var-name="--primary"></span>
+      </div>
+      <div class="var-container"> 
+        <span class="name">--header</span>
+        <span class="value" data-var-name="--header"></span>
+      </div>
+      <div class="var-container"> 
+        <span class="name">--text</span>
+        <span class="value" data-var-name="--text"></span>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
