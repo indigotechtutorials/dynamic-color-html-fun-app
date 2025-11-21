@@ -29,7 +29,7 @@ const convertRGBToHex = (r, g, b) =>{
 
 const extractRGBValues = (color) => {
     var canvas = document.createElement('canvas')
-    var context = canvas.getContext('2d')
+    var context = canvas.getContext('2d', { willReadFrequently: true })
     context.fillStyle = color
     context.fillRect(0,0,1,1)
     return [context.getImageData(0,0,1,1).data[0],
